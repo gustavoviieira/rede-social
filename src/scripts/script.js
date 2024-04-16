@@ -46,7 +46,7 @@ function createSectionSugest(sugestsUsers) {
         stack.classList.add("perfil__stack");
         divButton.classList.add("btn");
         button.classList.add("disable");
-        button.classList.add("active")
+        button.classList.add("active");
         button.innerText = "Seguir";
 
         button.addEventListener("click", () => {
@@ -91,6 +91,9 @@ function createPostSection(posts) {
         postTitle.innerText = post.title;
         text.classList.add("posts__text");
         text.innerText = post.text;
+
+        let newParagraph = textReduction(text.innerText, 131);
+
         buttonContainer.classList.add("button__container");
         button.classList.add("post__button");
         button.innerText = "Abrir Post";
@@ -104,7 +107,6 @@ function createPostSection(posts) {
 
         imgLike.addEventListener("click", () => {
             imgLike.classList.toggle("liked");
-        
             if (imgLike.classList.contains("liked")) {
                 imgLike.src = "./src/assets/images/liked.svg";
                 contagem.innerText = Number(contagem.innerText) + 1;
@@ -114,13 +116,30 @@ function createPostSection(posts) {
             }
         });
 
-        postsContainerUser.append(postsUser, postTitle, text, buttonContainer);
+        postsContainerUser.append(
+            postsUser,
+            postTitle,
+            newParagraph,
+            buttonContainer
+        );
         postsUser.append(imgUser, postInfo);
         postInfo.append(name, stack);
         buttonContainer.append(button, likeContainer);
         likeContainer.append(imgLike, contagem);
     }
 }
+function textReduction(text, characters) {
+    let newParagraph = document.createElement("p");
+    newParagraph.classList.add("posts__text");
+    text;
+    for (let i = 0; i < characters; i++) {
+        newParagraph.textContent += text[i];
+    }
+    newParagraph.textContent += "...";
+
+    return newParagraph;
+}
+
 createPostSection(posts);
 createSectionSugest(sugestsUsers);
 createPost(users);
