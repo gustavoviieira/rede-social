@@ -45,7 +45,8 @@ function createSectionSugest(sugestsUsers) {
         stack.innerText = sugestsUser.stack;
         stack.classList.add("perfil__stack");
         divButton.classList.add("btn");
-        button.classList.add("active");
+        button.classList.add("disable");
+        button.classList.add("active")
         button.innerText = "Seguir";
 
         button.addEventListener("click", () => {
