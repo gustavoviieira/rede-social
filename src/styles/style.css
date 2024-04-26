@@ -5,8 +5,7 @@
 .main__container {
     display: flex;
     flex-direction: column;
-    border: 1px solid orange;
-
+    
     padding: 0px 20px 0px 20px;
 }
 
@@ -100,7 +99,7 @@ button {
 }
 .posts__container {
     padding: 0px 20px 0px 20px;
-    border: 1px solid gold;
+     ;
 }
 
 .sugest__container {
@@ -119,7 +118,6 @@ button {
 }
 
 .sugest__perfil-container {
-    border: 1px solid gray;
     display: flex;
 
     overflow-x: auto;
@@ -148,7 +146,7 @@ button {
 
 .posts__container {
     display: flex;
-    flex-direction: column;border: 1px solid red;
+    flex-direction: column; 
 }
 
 .title__post-Principal {
@@ -161,7 +159,6 @@ button {
 
 .posts__container-user {
     margin-bottom: 50px;
-    border: 1px solid rgb(25, 0, 255);
     
 }
 
@@ -347,7 +344,6 @@ color: var(--gray2);
     }
     .modal{
          min-width: 320px;
-         border: 1px solid red;
          height: 80vh;
     }
   
