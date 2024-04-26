@@ -27,10 +27,13 @@
 
                 <div class="input__area">
                     <input type="text" placeholder="Digitar titulo do post" />
-                    <textarea placeholder="Digitar descrição do post">
+                    <textarea
+                        type="text"
+                        placeholder="Digitar descrição do post"
+                    >
                     </textarea>
                 </div>
-                
+
                 <button>Postar</button>
             </section>
 
@@ -45,7 +48,11 @@
 
             <div class="posts__container-user"></div>
         </section>
-        <script src="./src/scripts/dataBase.js"></script>
-        <script src="./src/scripts/script.js"></script>
+        <dialog class="modal">
+            <div class="modal__controller">
+                
+            </div>
+        </dialog>
+        <script type="module" src="./src/scripts/script.js"></script>
     </body>
 </html>

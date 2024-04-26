@@ -1,3 +1,6 @@
+import { users, posts, sugestsUsers } from "./dataBase.js";
+import { createModal } from "./modal.js"
+
 function createPost(users) {
     for (let i = 0; i < users.length; i++) {
         let user = users[i];
@@ -96,15 +99,18 @@ function createPostSection(posts) {
 
         buttonContainer.classList.add("button__container");
         button.classList.add("post__button");
+        button.datasetId = posts[i].id;
         button.innerText = "Abrir Post";
-        likeContainer.classList.add("likeConteiner");
+        button.addEventListener("click", () => {
+            handleModal();
+        });
 
+        likeContainer.classList.add("likeConteiner");
         imgLiked.classList.add("liked");
         contagem.innerText = post.likes;
         contagem.classList.add("n_like");
 
         imgLike.src = "./src/assets/images/like.svg";
-
         imgLike.addEventListener("click", () => {
             imgLike.classList.toggle("liked");
             if (imgLike.classList.contains("liked")) {
@@ -128,10 +134,11 @@ function createPostSection(posts) {
         likeContainer.append(imgLike, contagem);
     }
 }
+
 function textReduction(text, characters) {
     let newParagraph = document.createElement("p");
     newParagraph.classList.add("posts__text");
-    text;
+
     for (let i = 0; i < characters; i++) {
         newParagraph.textContent += text[i];
     }
@@ -139,6 +146,38 @@ function textReduction(text, characters) {
 
     return newParagraph;
 }
+function handleModal() {
+    const modalController = document.querySelector(".modal");
+    const buttonsCloseModal = document.querySelectorAll(".post__button");
+  
+    for (let i = 0; i < buttonsCloseModal.length; i++) {
+      const buttonCloseModal = buttonsCloseModal[i];
+  
+      buttonCloseModal.addEventListener("click", function (event) {
+        modalController.innerHTML = "";
+  
+        const modalContent = createModal(Number(event.target.datasetId));
+        console.log(modalContent)
+
+        modalController.appendChild(modalContent);
+  
+        modalController.showModal();
+  
+        closeModal();
+      });
+    }
+  }
+  
+  function closeModal() {
+    const modalClose = document.querySelector(".modal__close");
+    const modalController = document.querySelector(".modal");
+
+    modalClose.addEventListener("click", function () {
+      modalController.close();
+    });
+  }
+
+  handleModal();
 
 createPostSection(posts);
 createSectionSugest(sugestsUsers);

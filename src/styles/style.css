@@ -5,6 +5,7 @@
 .main__container {
     display: flex;
     flex-direction: column;
+    border: 1px solid orange;
 
     padding: 0px 20px 0px 20px;
 }
@@ -99,6 +100,7 @@ button {
 }
 .posts__container {
     padding: 0px 20px 0px 20px;
+    border: 1px solid gold;
 }
 
 .sugest__container {
@@ -117,6 +119,7 @@ button {
 }
 
 .sugest__perfil-container {
+    border: 1px solid gray;
     display: flex;
 
     overflow-x: auto;
@@ -145,7 +148,7 @@ button {
 
 .posts__container {
     display: flex;
-    flex-direction: column;
+    flex-direction: column;border: 1px solid red;
 }
 
 .title__post-Principal {
@@ -158,6 +161,8 @@ button {
 
 .posts__container-user {
     margin-bottom: 50px;
+    border: 1px solid rgb(25, 0, 255);
+    
 }
 
 .posts__user {
@@ -233,6 +238,135 @@ button {
     cursor: pointer;
 }
 
+.modal {
+    padding: 0;
+    height: 90vh;
+    background-color: var(--whiteFixed);
+    border-radius: 0.25rem;
+    border: none; 
+    position: relative;
+    max-width: content;
+  }
+  
+  .modal::backdrop {
+    background-color: #f3f3f370;
+  }
+  
+  .modal__container {
+    margin: 0rem 1.25rem 0rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+   
+  
+  
+  .modal__container > h2 {
+    font-weight: var(--fontWeightTitle1);
+    color: var(--greyColor1);
+    font-size: 1.5rem;
+    width: 18rem;
+    line-height: 2rem;
+  }
+  
+   
+
+  .posts__user-modal{
+    display: flex;
+    flex-direction: row;
+
+    gap: 10px;
+
+    margin-top: 25px;
+    margin-bottom: 10px;
+  }
+  .modal__content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0.875rem;
+    width: 11.5rem;
+  }
+  .modal__content > img {
+    width: 2.5rem;
+  }
+  
+  .modal__close {
+    position: absolute;
+    top: 15px;
+    right: -250px;
+
+    border-radius: 50%;
+    color: var(--greyColor2);
+    font-family: "nunito", "sans-serif";
+    background-color: var(--greyColor4);
+    cursor: pointer;
+}
+
+    .posts__title-modal > h2{
+        font-family: Inter, sans-serif;
+        font-size: 1px;
+        font-weight: 700;
+    
+        color: var(--gray1);
+    
+        margin-bottom: 20px;
+    }
+
+  @media (min-width: 320px){
+
+.posts__title-modal{
+        font-family: Inter, sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+    
+        color: var(--gray1);
+    
+        margin-bottom: 10px;
+    }
+    .modal__container > h2 {
+        width: auto;
+font-family: Inter;
+font-size: 28px;
+font-weight: 700;
+line-height: 40px;
+color: var(--gray2);
+
+      }
+      .modal__close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        /* width: 30px; */
+        /* height: 30px; */
+        border-radius: 50%;
+        color: var(--greyColor2);
+        font-family: "nunito", "sans-serif";
+        background-color: var(--greyColor4);
+        cursor: pointer;
+    }
+    .modal{
+         min-width: 320px;
+         border: 1px solid red;
+         height: 80vh;
+    }
+  
+    .modal__container > .posts__text-modal  {
+      font-size: 1.2rem;
+      width: auto;
+      color: var(--gray2);
+      font-family: "Inter", sans-serif;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .modal__controller {
+      margin-left: 300px;
+    }
+    .modal__container > h2 {
+        font-size: 40px;
+    }
+  }
 @media (min-width: 768px) {
     .header__container {
         padding: 30px 40px;

@@ -1,4 +1,4 @@
-const users = [
+export const users = [
     {
         id: 1,
         user: "Samuel Leão",
@@ -6,7 +6,8 @@ const users = [
         img: "./src/assets/images/user1.svg",
     },
 ];
-const posts = [
+
+export const posts = [
     {
         id: 1,
         title: "Como criar um interface simples e agradável utilizando boas práticas de design",
@@ -63,7 +64,7 @@ const posts = [
     },
 ];
 
-const sugestsUsers = [
+export const sugestsUsers = [
     {
         id: 1,
         user: "Carlos Lima",
