@@ -22,10 +22,9 @@ export function createModal(postId) {
 
   const buttonCloseModal = document.createElement("button");
 
-
   modalContainer.classList.add("modal__container");
   modalContent.classList.add("modal__content");
-  
+
   buttonCloseModal.classList.add("modal__close");
   buttonCloseModal.innerText = "X";
 
@@ -41,16 +40,11 @@ export function createModal(postId) {
   text.classList.add("posts__text-modal");
   text.innerText = post.text;
 
-  modalContainer.append(
-    postsUser,
-    postTitle,
-    text,
-    modalContent,
-);
-postsUser.append(imgUser, postInfo);
-postInfo.append(name, stack);
- 
+  modalContainer.append(postsUser, postTitle, text, modalContent);
+  postsUser.append(imgUser, postInfo);
+  postInfo.append(name, stack);
+
   modalContent.append(buttonCloseModal);
-  
+
   return modalContainer;
 }

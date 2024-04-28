@@ -1,58 +1,53 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
-            rel="stylesheet"
-        />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
 
-        <link rel="stylesheet" href="./src/styles/reset.css" />
-        <link rel="stylesheet" href="./src/styles/global.css" />
-        <link rel="stylesheet" href="./src/styles/style.css" />
-        <title>Rede Social</title>
-    </head>
-    <body>
-        <header class="header__container">
-            <img src="./src/assets/images/logo.svg" alt="logo" />
-            <p class="header__text">sair</p>
-        </header>
+    <link rel="stylesheet" href="./src/styles/reset.css" />
+    <link rel="stylesheet" href="./src/styles/global.css" />
+    <link rel="stylesheet" href="./src/styles/style.css" />
+    <title>Rede Social</title>
+  </head>
+  <body>
+    <header class="header__container">
+      <img src="./src/assets/images/logo.svg" alt="logo" />
+      <p class="header__text">sair</p>
+    </header>
 
-        <main class="main__container">
-            <section class="publicar__container">
-                <div class="perfil__container"></div>
+    <main class="main__container">
+      <section class="publicar__container">
+        <div class="perfil__container"></div>
 
-                <div class="input__area">
-                    <input type="text" placeholder="Digitar titulo do post" />
-                    <textarea
-                        type="text"
-                        placeholder="Digitar descrição do post"
-                    >
-                    </textarea>
-                </div>
+        <div class="input__area">
+          <input type="text" placeholder="Digitar titulo do post" />
+          <textarea type="text" placeholder="Digitar descrição do post">
+          </textarea>
+        </div>
 
-                <button>Postar</button>
-            </section>
+        <button>Postar</button>
+      </section>
 
-            <aside class="sugest__container">
-                <h2 class="sugest__title">Sugestões para você seguir</h2>
-                <div class="sugest__perfil-container"></div>
-            </aside>
-        </main>
+      <aside class="sugest__container">
+        <h2 class="sugest__title">Sugestões para você seguir</h2>
+        <div class="sugest__perfil-container"></div>
+      </aside>
+    </main>
 
-        <section class="posts__container">
-            <h1 class="title__post-Principal">Posts</h1>
+    <section class="posts__container">
+      <h1 class="title__post-Principal">Posts</h1>
 
-            <div class="posts__container-user"></div>
-        </section>
-        <dialog class="modal">
-            <div class="modal__controller">
-                
-            </div>
-        </dialog>
-        <script type="module" src="./src/scripts/script.js"></script>
-    </body>
+      <div class="posts__container-user"></div>
+    </section>
+    <dialog class="modal">
+      <div class="modal__controller"></div>
+    </dialog>
+    <script type="module" src="./src/scripts/script.js"></script>
+  </body>
 </html>
