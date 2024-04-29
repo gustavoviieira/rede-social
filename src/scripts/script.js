@@ -176,7 +176,6 @@ function closeModal() {
 }
 
 handleModal();
-
 createPostSection(posts);
 createSectionSugest(sugestsUsers);
 createPost(users);
