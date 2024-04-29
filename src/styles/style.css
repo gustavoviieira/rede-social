@@ -63,14 +63,13 @@ input::placeholder {
   font-family: Inter, sans-serif;
   font-size: 16px;
   font-weight: 400;
-
 }
 
 textarea {
   height: 130px;
   border: 2px solid var(--gray4);
   border-radius: var(--radius);
- padding: 13px 21px;
+  padding: 13px 21px;
 
   resize: none;
   outline: none;
@@ -87,6 +86,8 @@ textarea::placeholder {
 }
 
 button {
+  cursor: pointer;
+
   height: 38px;
 
   padding: 0px 12px 0px 12px;
@@ -240,7 +241,7 @@ button {
 
 .modal {
   padding: 0;
-  height: 90vh;
+  width: 627px;
   background-color: var(--whiteFixed);
   border-radius: 0.25rem;
   border: none;
@@ -249,7 +250,7 @@ button {
 }
 
 .modal::backdrop {
-  background-color: #f3f3f370;
+  background-color: #00000090;
 }
 
 .modal__container {
@@ -341,7 +342,7 @@ button {
   }
   .modal {
     min-width: 320px;
-    height: 80vh;
+    height: 70vh;
   }
 
   .modal__container > .posts__text-modal {
