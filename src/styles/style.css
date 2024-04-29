@@ -76,9 +76,11 @@ textarea {
 
   margin-bottom: 22px;
 }
-textarea:focus {
+
+textarea:focus, input:focus {
   border: 2px solid var(--gray1);
 }
+
 textarea::placeholder {
   font-family: Inter, sans-serif;
   font-size: 16px;
@@ -258,7 +260,7 @@ button {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-}
+} 
 
 .modal__container > h2 {
   font-weight: var(--fontWeightTitle1);
